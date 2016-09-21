@@ -96,7 +96,7 @@ function getWeather() {
     var locationKey = ($("#searchtext").val());
 
     // return "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215";
-    $.getJSON("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
+    $.getJSON("https://crossorigin.me/http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
         console.log(JSON.stringify(result));
 
         weather = result[0];
@@ -107,11 +107,11 @@ function getWeather() {
 
 }
 
-function jsonCallback(json){
-  console.log(json);
+function jsonCallback(json) {
+    console.log(json);
 }
 
 $.ajax({
-  url: "https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?",
-  dataType: "jsonp"
+    url: "https://crossorigin.me/http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?",
+    dataType: "jsonp"
 });
