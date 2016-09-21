@@ -99,7 +99,7 @@ function getWeather() {
     //   $.getJSON("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
 
 
-    $json_url = "https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?";
+    $json_url = 'https://dataservice.accuweather.com/currentconditions/v1/' + locationKey + '.json?language=en&apikey=' + apiKey + '&details=true&callback=?';
 
     $json = file_get_contents($json_url);
     $data = json_decode($json, TRUE);
