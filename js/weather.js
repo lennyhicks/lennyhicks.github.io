@@ -59,7 +59,7 @@ $(function() {
     var val = ($("#searchtext").val());
     var options = {
         url: function(phrase) {
-            return "http://apidev.accuweather.com/locations/v1/cities/autocomplete?apikey=hoArfRosT1215&q=" + ($("#searchtext").val());
+            return "https://apidev.accuweather.com/locations/v1/cities/autocomplete?apikey=hoArfRosT1215&q=" + ($("#searchtext").val());
         },
         ajaxSettings: {
             dataType: "jsonp",
@@ -96,7 +96,7 @@ function getWeather() {
     var locationKey = ($("#searchtext").val());
 
     // return "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215";
-    $.getJSON("http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
+    $.getJSON("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
         console.log(JSON.stringify(result));
 
         weather = result[0];
