@@ -83,6 +83,7 @@ $(function() {
                 currentLocation = $("#searchtext").getSelectedItemData().LocalizedName + ", " + $("#searchtext").getSelectedItemData().AdministrativeArea.LocalizedName;
                 $("#searchtext").val(locationKey).trigger("change");
                 console.log(currentLocation);
+                $("#currentLocation").text(currentLocation);
                 getWeather();
             }
         }
@@ -102,7 +103,7 @@ function getWeather() {
         weather = result[0];
         console.log("Time: " + weather.LocalObservationDateTime);
         console.log("Temp: " + weather.Temperature.Imperial.Value + " F" + String.fromCharCode(176));
-        $("#currentLocation").text(currentLocation);
+        
     });
 
 }
