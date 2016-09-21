@@ -53,7 +53,9 @@ var currentLocation;
  });*/
 
 $(function() {
-
+    $("menuDropdown").click(function() {
+        $("loctionDiv").toggle();
+    });
     var val = ($("#searchtext").val());
     var options = {
         url: function(phrase) {
@@ -78,7 +80,7 @@ $(function() {
                 var locationKey = $("#searchtext").getSelectedItemData().Key;
                 $("#searchtext").val(locationKey).trigger("change");
 
-                currentLocation = $("#searchtext").getSelectedItemData().LocalizedName +", "+ $("#searchtext").getSelectedItemData().AdministrativeArea.LocalizedName;
+                currentLocation = $("#searchtext").getSelectedItemData().LocalizedName + ", " + $("#searchtext").getSelectedItemData().AdministrativeArea.LocalizedName;
                 $("#searchtext").val(locationKey).trigger("change");
                 console.log(currentLocation);
                 getWeather();
