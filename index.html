@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <div class="col-md-3 nopadding" style="background-color:wheat; height:500px; border-radius:10px">
+    <div class="col-md-3 col-md-push-3 nopadding" style="background-color:wheat; height:500px; border-radius:10px">
 
         <!--       <div class="btn-group pull-left pull-up">
             <button class="btn btn-default btn-lg dropdown-toggle buttonMenu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,23 +58,33 @@
                 <ul class="nav navbar-nav">
 
                     <li>
-                        <a id="currentLocation" style="color:white;" expanded></a>
+                        <a id="currentLocation"></a>
                     </li>
                 </ul>
             </div>
         </nav>
 
 
+        <div id="mainDiv" class="col-md-12 nopadding">
+            <div hidden id="loctionDiv" class="col-md-9 locationMenu" style="background-color:#9C9F84; height:90%; border-radius: 0px 0px 0px 10px;">
 
-        <div id="loctionDiv" class="col-md-9" style="background-color:#9C9F84; height:90%; border-radius: 0px 0px 0px 10git px;">
-
-            <div class="row">
-                <div class="col-md-12 vcenter">
-                    <input id="searchtext" type="search"> </input>
+                <div class="row">
+                    <div class="col-md-2 nopadding">
+                        <button id="addLocation" class="navbar-brand glyphicon glyphicon-plus buttonMenu "></button>
+                    </div>
+                    <div class="col-md-10">
+                        <input id="searchLocation" type="search" style="padding:10px" placeholder="Add a New Location"> </input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        saved Locations
+                    </div>
                 </div>
             </div>
+
         </div>
-    </div>
+
 
 
 </body>

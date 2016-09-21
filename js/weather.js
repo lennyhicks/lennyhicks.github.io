@@ -53,13 +53,16 @@ var currentLocation;
  });*/
 
 $(function() {
-    $("menuDropdown").click(function() {
-        $("loctionDiv").toggle();
+    $("#menuDropdown").click(function() {
+        $("#loctionDiv").animate({ width: 'toggle' }, "slow");
     });
-    var val = ($("#searchtext").val());
+        $("#addLocation").click(function() {
+        $("#searchLocation").animate({ width: 'toggle' }, "slow");
+    });
+    var val = ($("#searchLocation").val());
     var options = {
         url: function(phrase) {
-            return "https://apidev.accuweather.com/locations/v1/cities/autocomplete?apikey=hoArfRosT1215&q=" + ($("#searchtext").val());
+            return "https://apidev.accuweather.com/locations/v1/cities/autocomplete?apikey=hoArfRosT1215&q=" + ($("#searchLocation").val());
         },
         ajaxSettings: {
             dataType: "jsonp",
@@ -77,11 +80,11 @@ $(function() {
         list: {
 
             onSelectItemEvent: function() {
-                var locationKey = $("#searchtext").getSelectedItemData().Key;
-                $("#searchtext").val(locationKey).trigger("change");
+                var locationKey = $("#searchLocation").getSelectedItemData().Key;
+                $("#searchLocation").val(locationKey).trigger("change");
 
-                currentLocation = $("#searchtext").getSelectedItemData().LocalizedName + ", " + $("#searchtext").getSelectedItemData().AdministrativeArea.LocalizedName;
-                $("#searchtext").val(locationKey).trigger("change");
+                currentLocation = $("#searchLocation").getSelectedItemData().LocalizedName + ", " + $("#searchLocation").getSelectedItemData().AdministrativeArea.LocalizedName;
+                $("#searchLocation").val(locationKey).trigger("change");
                 console.log(currentLocation);
                 $("#currentLocation").text(currentLocation);
                 getWeather();
@@ -89,12 +92,12 @@ $(function() {
         }
     };
 
-    $("#searchtext").easyAutocomplete(options);
+    $("#searchLocation").easyAutocomplete(options);
 });
 
 function getWeather() {
 
-    var locationKey = ($("#searchtext").val());
+    var locationKey = ($("#searchLocation").val());
 
     // return "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215";
     $.getJSON("https://crossorigin.me/http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
@@ -103,7 +106,7 @@ function getWeather() {
         weather = result[0];
         console.log("Time: " + weather.LocalObservationDateTime);
         console.log("Temp: " + weather.Temperature.Imperial.Value + " F" + String.fromCharCode(176));
-        
+
     });
 
 }
