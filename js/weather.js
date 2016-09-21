@@ -96,8 +96,14 @@ function getWeather() {
     var locationKey = ($("#searchtext").val());
 
     // return "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215";
-    $.getJSON("http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
-        console.log(JSON.stringify(result));
+ //   $.getJSON("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
+ 
+ 
+     $json_url = "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215"; 
+
+    $json = file_get_contents($json_url);
+    $data = json_decode($json, TRUE);
+        console.log(JSON.stringify($data));
 
         weather = result[0];
         console.log("Time: " + weather.LocalObservationDateTime);
