@@ -96,19 +96,19 @@ function getWeather() {
     var locationKey = ($("#searchtext").val());
 
     // return "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215";
- //   $.getJSON("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
- 
- 
-     $json_url = "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=hoArfRosT1215"; 
+    //   $.getJSON("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?", function(result) {
+
+
+    $json_url = "https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?";
 
     $json = file_get_contents($json_url);
     $data = json_decode($json, TRUE);
-        console.log(JSON.stringify($data));
+    console.log(JSON.stringify($data));
 
-        weather = result[0];
-        console.log("Time: " + weather.LocalObservationDateTime);
-        console.log("Temp: " + weather.Temperature.Imperial.Value + " F" + String.fromCharCode(176));
-        $("#currentLocation").text(currentLocation);
-    });
+    weather = result[0];
+    console.log("Time: " + weather.LocalObservationDateTime);
+    console.log("Temp: " + weather.Temperature.Imperial.Value + " F" + String.fromCharCode(176));
+    $("#currentLocation").text(currentLocation);
+});
 
 }
