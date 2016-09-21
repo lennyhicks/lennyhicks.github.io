@@ -1,1 +1,82 @@
-Hello World
+<html>
+
+<head>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- JS file -->
+    <script src="js/jquery.easy-autocomplete.js"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/easy-autocomplete.css">
+    <script src="js/weather.js"></script>
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/weatherApp.css">
+
+
+
+</head>
+
+<body>
+    <div class="col-md-3 nopadding" style="background-color:wheat; height:500px; border-radius:10px">
+
+        <!--       <div class="btn-group pull-left pull-up">
+            <button class="btn btn-default btn-lg dropdown-toggle buttonMenu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <span class="glyphicon glyphicon-align-justify"> </span>
+        </button>
+            <h1><span id="currentLocation"></span>
+                <ul class="dropdown-menu">
+                    <li id="addLocation">Add Loction</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+        </div>
+        <div class="col-md-12" style="; border-radius:10px">
+
+            <div class="btn-group pull-left pull-up">
+                <input id="searchtext" type="search"> </input>
+            </div>
+        </div>
+        -->
+
+
+
+        <nav class="navbar barMenu nopadding" style="border-radius: 10px 10px 0px 0px; ">
+            <div class="container-fluid">
+                <div class="navbar-header ">
+                    <button id="menuDropdown" class="navbar-brand glyphicon glyphicon-align-justify buttonMenu"></button>
+                </div>
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a id="currentLocation" expanded></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <div class="col-md-9" style="background-color:#5C755E; height:90%; border-radius: 0px 0px 0px 10git px;">
+
+            <div class="row">
+                <div class="col-md-12 vcenter">
+                    <input id="searchtext" type="search"> </input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
