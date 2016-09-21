@@ -106,3 +106,12 @@ function getWeather() {
     });
 
 }
+
+function jsonCallback(json) {
+    console.log(json);
+}
+
+$.ajax({
+    url: "https://crossorigin.me/http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + ".json?language=en&apikey=" + apiKey + "&details=true&callback=?",
+    dataType: "jsonp"
+});
