@@ -15,7 +15,7 @@ var divTemp;
 var icon;
 var savedLocations = JSON.parse(localStorage.getItem(['localStorage']) || null);
 var currentLocation = "";
-var debug = true;
+var debug = false;
 var flipped = false;
 
 function log(msg) {
@@ -33,7 +33,6 @@ $(function() {
         for (var i = 0; i < (Storage.length - 3); i++) {
             console.log(localStorage.key(i));
         }
-        log("Saved Locations : " + savedLocations);
         i = localStorage.length - 2;
         (function theLoop(i) {
             setTimeout(function() {
