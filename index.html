@@ -15,38 +15,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- JS file -->
     <script src="js/jquery.easy-autocomplete.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCyDoP0qIBeGe2sbs46oiMw6a85KaZomz8"></script>
+    <script src="js/jquery.geocomplete.js"></script>
 
     <!-- CSS file -->
     <link rel="stylesheet" href="css/easy-autocomplete.css">
     <script src="js/weather.js"></script>
     <link rel="stylesheet" href="css/weather-icons.css">
     <link rel="stylesheet" href="css/weatherApp.css">
-
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
 
 </head>
 
 <body>
-    <div class="col-md-3 col-md-push-3 nopadding" style="background-color:wheat; height:500px; border-radius:10px">
-
-        <!--       <div class="btn-group pull-left pull-up">
-            <button class="btn btn-default btn-lg dropdown-toggle buttonMenu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           <span class="glyphicon glyphicon-align-justify"> </span>
-        </button>
-            <h1><span id="currentLocation"></span>
-                <ul class="dropdown-menu">
-                    <li id="addLocation">Add Loction</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-        </div>
-        <div class="col-md-12" style="; border-radius:10px">
-
-            <div class="btn-group pull-left pull-up">
-                <input id="searchtext" type="search"> </input>
-            </div>
-        </div>
-        -->
+    <div id="appDiv" class="col-md-3 col-md-push-3  nopadding" style="background-color:wheat; height:500px; border-radius:10px">
 
 
 
@@ -58,32 +41,74 @@
                 <ul class="nav navbar-nav">
 
                     <li>
-                        <a id="currentLocation"></a>
+                        <a id="currentLocation" class="currentLocation"></a>
                     </li>
                 </ul>
             </div>
         </nav>
 
 
-        <div id="mainDiv" class="col-md-12 nopadding">
-            <div hidden id="loctionDiv" class="col-md-9 locationMenu" style="background-color:#9C9F84; height:90%; border-radius: 0px 0px 0px 10px;">
 
-                <div class="row">
-                    <div class="col-md-2 nopadding">
-                        <button id="addLocation" class="navbar-brand glyphicon glyphicon-plus buttonMenu "></button>
-                    </div>
-                    <div class="col-md-10">
-                        <input id="searchLocation" type="search" style="padding:10px" placeholder="Add a New Location"> </input>
-                    </div>
+
+
+
+
+        <div id="bg_mask" class="col-md-12 nopadding frontlayer card-container">
+            <!-- Main Div -->
+            <div id=mainDiv class="col-md-12 mainDiv backDrop card holder flipH">
+                <div class="front">
+                    <span id="tempText" class="col-md-12 tempText"></span>
+                    <span id="statusText" class="col-md-12 statusText"></span>
+                    <span id="otherText" class="row otherText borderBottom">
+                        <span class="col-md-4 otherText">Low Temp</span>
+                    <span class="col-md-4 otherText">Rain Chance</span>
+                    <span class="col-md-4 otherText"> Max Temp</span>
+                    </span>
+                    <span id="otherText" class="row">
+                        <span class="col-md-4 otherText" id="minTemp"></span>
+                    <span class="col-md-4 otherText" id="percipChance"></span>
+                    <span class="col-md-4 otherText" id="maxTemp"></span>
+                    </span>
+
+                    <button id="weekFlip" class="btn btn-danger col-md-12 flip">Veiw Weekly</button>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        saved Locations
-                    </div>
+                <div class="back">
+                    <div id="monday" class="col-md-12 daily"></div>
+                    <div id="tuesday" class="col-md-12 daily"></div>
+                    <div id="wenesday" class="col-md-12 daily"></div>
+                    <div id="thursday" class="col-md-12 daily"></div>
+                    <div id="friday" class="col-md-12 daily"></div>
+                    <div id="saturday" class="col-md-12 daily"></div>
+                    <div id="sunday" class="col-md-12 daily"></div>
+
+                    <button id="weekFlip" class="btn btn-danger col-md-12 flip">Veiw Daily</button>
                 </div>
+
             </div>
 
         </div>
+
+
+
+        <!-- SideBar -->
+        <div hidden id="locationDiv" class="col-md-9 locationMenu" style="">
+
+            <div class="row">
+                <div class="col-md-2 nopadding">
+                    <button id="addLocation" class="navbar-brand glyphicon glyphicon-plus buttonMenu "></button>
+                </div>
+                <div class="col-md-10">
+                    <input id="searchLocation" type="search" style="padding:10px" placeholder="Add a New Location"> </input>
+                </div>
+            </div>
+            <div id="widgets" class="row">
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
 
 
 
