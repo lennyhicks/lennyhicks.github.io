@@ -1,33 +1,42 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title> Weatherly </title>
+    <title>Weatherly</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAElLSgTn5+T/09PR/+fn5P/n5+T/5eXi/+fn5P/T09H/5+fk/+fn5P/l5eL/5+fk/9PT0f/n5+T/Pz8+AS8xMQPn5+T/1dXT/+fn5P/Y2db/5+fk/+fn5P/V1dP/5+fk/9jZ1v/n5+T/5+fk/9XV0//n5+T/2NnW/+fn5P8AAAAA5+fk/+fn5P/T09H/5+fk/+bm4//n5+T/5+fk/9PT0f/n5+T/5ubj/+fn5P/n5+T/09PR/+fn5P/m5uP/5+fk/wAAAADj4+D/5+fk/9PT0f/n5+T/5+fk/+Pj4P/n5+T/09PR/+fn5P/n5+T/4+Pg/+fn5P/T09H/5+fk/+fn5P8AAAAAAAAAANTU0v/n5+T/3d7b/+fn5P/n5+T/1NTS/+fn5P/d3tv/5+fk/+fn5P/U1NL/5+fk/93e2//n5+T/AAAAAAAAAADn5+T/09PR/+fn5P/n5+T/5+fk/+fn5P/T09H/5+fk/+fn5P/n5+T/5+fk/9PT0f/n5+T/AAAAAAAAAABex+//XMDl/+fn5P/U1NL/5+fk/+fn5P/d3tv/5+fk/9TU0v/n5+T/5+fk/93e2//n5+T/AAAAAAAAAAAAAAAAXsfv/17H7/9at9r/Xsfv/+Pj4P/n5+T/5+fk/9PT0f/n5+T/4+Pg/+fn5P/n5+T/AAAAAAAAAABAREQGAAAAAF7H7/9exu7/Xsfv/1q32v9ex+//Xsfv/+bm4//n5+T/09PR/+fn5P/n5+T/5ubj/wAAAAAAAAAAAAAAAAAAAABex+//Xsfv/1u74P9ex+//W7nc/17H7/8AAAAAAAAAAOfn5P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALzExA17H7/9ex+//Wrfa/17H7/8vMTEDAAAAAAAAAAAAAAAAAAAAAC8xMQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AACAAwAAAAEAAAAAAACAAAAAwAAAAMABAACAAwAAgAcAAIAHAACBvwAAw/8AAP//AAD//wAA//8AAA=="
-        rel="icon" type="image/x-icon" />
+        rel="icon" type="image/x-icon">
     <!-- jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js">
+    </script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- JS file -->
-    <script src="js/jquery.easy-autocomplete.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCyDoP0qIBeGe2sbs46oiMw6a85KaZomz8"></script>
-    <script src="js/jquery.geocomplete.js"></script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <!-- JS file -->
+
+    <script src="js/jquery.easy-autocomplete.js">
+    </script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCyDoP0qIBeGe2sbs46oiMw6a85KaZomz8">
+    </script>
+    <script src="js/jquery.geocomplete.js">
+    </script>
     <!-- CSS file -->
-    <link rel="stylesheet" href="css/easy-autocomplete.css">
-    <script src="js/weather.js"></script>
-    <link rel="stylesheet" href="css/weather-icons.css">
-    <link rel="stylesheet" href="css/weatherApp.css">
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <link href="css/easy-autocomplete.css" rel="stylesheet">
+    <script src="js/weather.js">
+    </script>
+    <link href="css/weather-icons.css" rel="stylesheet">
+    <link href="css/weatherApp.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+    </script>
+    <script src="http://w.sharethis.com/button/buttons.js" type="text/javascript">
+    </script>
     <script type="text/javascript">
         stLight.options({
             publisher: "1b7e183e-1d75-4f56-883b-94094afeb0a5",
@@ -36,96 +45,61 @@
             hashAddressBar: false
         });
     </script>
-
 </head>
 
 <body>
-    <div id="appDiv" class="col-md-3 col-md-push-3  nopadding" style="background-color:wheat; height:500px; border-radius:10px">
-
-
-
-        <nav class="navbar barMenu nopadding" style="border-radius: 10px 10px 0px 0px; ">
+    <div class="col-md-3 col-md-push-3 nopadding" id="appDiv" style="background-color:wheat; height:500px; border-radius:10px">
+        <nav class="navbar barMenu nopadding" style="border-radius: 10px 10px 0px 0px;">
             <div class="container-fluid">
-                <div class="navbar-header ">
-                    <button id="menuDropdown" class="navbar-brand glyphicon glyphicon-align-justify buttonMenu"></button>
-
-
+                <div class="navbar-header">
+                    <button class="navbar-brand glyphicon glyphicon-align-justify buttonMenu" id="menuDropdown"></button>
                 </div>
                 <ul class="nav navbar-nav">
-
                     <li>
-                        <a id="currentLocation" class="currentLocation"></a>
+                        <a class="currentLocation" id="currentLocation"></a>
                     </li>
-
-                    <span class='st_facebook_large pull-right' displayText='Facebook'></span>
+                    <li style="list-style: none"><span class='st_facebook_large pull-right'></span></li>
                 </ul>
             </div>
         </nav>
-
-
-
-
-
-
-
-        <div id="bg_mask" class="col-md-12 nopadding frontlayer card-container">
+        <div class="col-md-12 nopadding frontlayer card-container" id="bg_mask">
             <!-- Main Div -->
-            <div id=mainDiv class="col-md-12 mainDiv backDrop card holder flipH">
+            <div class="col-md-12 mainDiv backDrop card holder flipH" id="mainDiv">
                 <div class="front">
-                    <span id="tempText" class="col-md-12 tempText"></span>
-                    <span id="statusText" class="col-md-12 statusText"></span>
-                    <span id="otherText" class="row otherText borderBottom">
-                        <span class="col-md-4 otherText">Low Temp</span>
-                    <span class="col-md-4 otherText">Rain Chance</span>
-                    <span class="col-md-4 otherText"> Max Temp</span>
-                    </span>
-                    <span id="otherText" class="row">
-                        <span class="col-md-4 otherText" id="minTemp"></span>
-                    <span class="col-md-4 otherText" id="percipChance"></span>
-                    <span class="col-md-4 otherText" id="maxTemp"></span>
-                    </span>
-
-                    <button id="weekFlip" class="btn btn-danger col-md-12 flip">Veiw Weekly</button>
+                    <span class="col-md-12 tempText" id="tempText"></span>
+                    <span class="col-md-12 statusText" id="statusText"></span>
+                    <span class="row otherText borderBottom" id="otherText"><span class="col-md-4 otherText">Low
+                    Temp</span> <span class="col-md-4 otherText">Rain
+                    Chance</span> <span class="col-md-4 otherText">Max
+                    Temp</span></span> <span class="row" id="otherText"><span class="col-md-4 otherText" id=
+                    "minTemp"></span> <span class="col-md-4 otherText" id="percipChance"></span> <span class="col-md-4 otherText" id="maxTemp"></span></span> <button class="btn btn-danger col-md-12 flip" id="weekFlip">Veiw
+                    Weekly</button>
                 </div>
                 <div class="back">
-                    <div id="monday" class="col-md-12 daily"></div>
-                    <div id="tuesday" class="col-md-12 daily"></div>
-                    <div id="wenesday" class="col-md-12 daily"></div>
-                    <div id="thursday" class="col-md-12 daily"></div>
-                    <div id="friday" class="col-md-12 daily"></div>
-                    <div id="saturday" class="col-md-12 daily"></div>
-                    <div id="sunday" class="col-md-12 daily"></div>
-
-                    <button id="weekFlip" class="btn btn-danger col-md-12 flip">Veiw Daily</button>
+                    <div class="col-md-12 daily" id="monday"></div>
+                    <div class="col-md-12 daily" id="tuesday"></div>
+                    <div class="col-md-12 daily" id="wenesday"></div>
+                    <div class="col-md-12 daily" id="thursday"></div>
+                    <div class="col-md-12 daily" id="friday"></div>
+                    <div class="col-md-12 daily" id="saturday"></div>
+                    <div class="col-md-12 daily" id="sunday">
+                    </div><button class="btn btn-danger col-md-12 flip" id="weekFlip">Veiw Daily</button>
                 </div>
-
             </div>
-
         </div>
-
-
-
         <!-- SideBar -->
-        <div hidden id="locationDiv" class="col-md-9 locationMenu" style="">
-
+        <div class="col-md-9 locationMenu" hidden="" id="locationDiv" style="">
             <div class="row">
                 <div class="col-md-2 nopadding">
-                    <button id="addLocation" class="navbar-brand glyphicon glyphicon-plus buttonMenu "></button>
+                    <button class="navbar-brand glyphicon glyphicon-plus buttonMenu" id="addLocation"></button>
                 </div>
                 <div class="col-md-10">
-                    <input id="searchLocation" type="search" style="padding:10px" placeholder="Add a New Location"> </input>
+                    <input id="searchLocation" placeholder="Add a New Location" style="padding:10px" type="search">
                 </div>
             </div>
-            <div id="widgets" class="row">
-            </div>
+            <div class="row" id="widgets"></div>
         </div>
-
-
     </div>
-    </div>
-
-
-
 </body>
 
 </html>
