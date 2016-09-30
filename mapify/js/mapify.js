@@ -29,7 +29,7 @@ var map;
 
 function addLocation() {
 
-    if (widgetId < 7) {
+    if (widgetId <9) {
         $('<div class="col-md-3" style="text-decoration:none; overflow:hidden; height:400px; max-width:100%;">' +
             '<div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;">' +
             '<button id="btnClose" class="btn btn-danger pull-right glyphicon glyphicon-remove closebutton" >' +
