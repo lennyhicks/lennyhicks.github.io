@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- JS Sheet -->
+    <script type="text/javascript" src="js/tipCalculator.js">
+    </script>
+
+    <!-- CSS Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/tipCalculator.css" />
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <p id="nav">Tip Calculator</p>
+            <span class='st_sharethis_large navbar-right' displayText='ShareThis'></span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-push-4" id="calcMain">
+                <h1 id="head">Tip Calculator</h1>
+                <br/>
+                <p><strong> Enter your amount : </strong></p>
+                <input class="text" id="billAmount" maxlength="6" onkeypress="validate(event)" />
+                <br/>
+                <br/>
+                <div class="form-group">
+                    <label for="tipPerc">Choose a percentage to tip : </label>
+                    <select class="form-control" id="dropDown">
+                        <option value=".30">30% - Outstanding!</option>
+                        <option value=".20">20% - Good</option>
+                        <option value=".15">15% - It was okay</option>
+                        <option value=".10">10% - Bad</option>
+                        <option value=".5">5% - Terrible</option>]
+                   </select>
+                </div>
+                <br/>
+                <p><strong>How many people are splitting the bill? </strong>
+                    <br/>
+                    <input class="text" id="peopleSharing" maxlength="6" onkeypress="validate(event)" /><strong> people.</strong> </p>
+                <br/>
+                <br/>
+                <button class="btn btn-warning" id="calculate">Calculate Tip</button>
+                <span id="tipAmount"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

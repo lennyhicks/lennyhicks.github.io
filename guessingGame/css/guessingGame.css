@@ -1,0 +1,38 @@
+.input {
+    height: 40%;
+    font-size: 90pt;
+    background-color: gray;
+    text-align: center;
+    border: 5px solid black;
+    color: white;
+}
+
+.instructions {
+    font-size: 20pt;
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.guessLeft {
+    font-size: 36pt;
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+.right {
+    background-color: green !important;
+}
+
+.otherRight {
+    background-color: yellow !important;
+}
+
+.otherWrong {
+    background-color: red !important;
+}

@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/ticTacToe.css">
+
+    <script type="text/javascript" src="js/ticTacToe.js"></script>
+    <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "1b7e183e-1d75-4f56-883b-94094afeb0a5",
+            doNotHash: false,
+            doNotCopy: false,
+            hashAddressBar: false
+        });
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div id="oWinsText" class="col-md-2 guessLeft">o Wins</div>
+        <div id="turnText" class="col-md-8 guessLeft">X's Turn
+            <span class='st_facebook_large' displayText='Facebook'></span>
+        </div>
+        <div id="xWinsTest" class="col-md-2 guessLeft pull-right">x Wins</div>
+    </div>
+    <div class="row">
+        <div id="oWins" class="col-md-2 guessLeft"></div>
+        <div id="xWins" class="col-md-2 guessLeft pull-right"></div>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td id="0" class="box"></td>
+                <td id="1" class="box"></td>
+                <td id="2" class="box"></td>
+            </tr>
+            <tr>
+                <td id="3" class="box"></td>
+                <td id="4" class="box"></td>
+                <td id="5" class="box"></td>
+            </tr>
+            <tr>
+                <td id="6" class="box"></td>
+                <td id="7" class="box"></td>
+                <td id="8" class="box"></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div class="col-md-12">
+        <button id="resetGame" class="col-md-4 col-md-push-4 btn btn-danger">Reset Game</button>
+    </div>
+</body>
+
+</html>

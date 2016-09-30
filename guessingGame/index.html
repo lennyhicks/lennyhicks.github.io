@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/guessingGame.css">
+
+    <script type="text/javascript" src="js/guessingGame.js"></script>
+
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "1b7e183e-1d75-4f56-883b-94094afeb0a5",
+            doNotHash: false,
+            doNotCopy: false,
+            hashAddressBar: false
+        });
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <div id="guessLeft" class="col-md-12 guessLeft">Please input your Numbers 0-9 with no repeating numbers<span class='st_facebook_large' displayText='Facebook'></span></div>
+    </div>
+    <div class="row">
+        <input id="guessOne" class="col-md-2 col-md-push-3 input" maxlength="1" onkeypress='validate(event)'>2</input>
+        <input id="guessTwo" class="col-md-2 col-md-push-3 input" maxlength="1" onkeypress='validate(event)'>2</input>
+        <input id="guessThree" class="col-md-2 col-md-push-3 input" maxlength="1" onkeypress='validate(event)'>2</input>
+
+    </div>
+    <br>
+    <div class="row">
+        <div id="guessDiv" class="col-md-2 col-md-push-5"><button id="guessButton" class="btn btn-inverse" style="width : 100%">Check</button></div>
+    </div>
+    <ul class="instructions">
+        <li>Enter your Guesses of number 0-9 with no repeating numbers</li>
+        <li>If a box turns green You have the correct number in that box.</li>
+        <li>If a box turns yellow The number you have matches another box.</li>
+        <li>If a box turns red the number you have does not match any box.</li>
+    </ul>
+
+</body>
+
+</html>
