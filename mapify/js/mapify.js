@@ -67,6 +67,7 @@ $(function() {
     //Delete the selected Widget
     $(document).on('click', '#btnClose', function() {
         $(this).closest('div.col-md-3').remove();
+        widgetId--;
     });
     // Autocompletes and searchs for your location
     $("#searchLocation").keyup(function() {
