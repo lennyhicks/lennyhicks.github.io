@@ -33,7 +33,7 @@ function addLocation() {
         $('<div class="col-md-3" style="text-decoration:none; overflow:hidden; height:400px; max-width:100%;">' +
             '<div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;">' +
             '<button id="btnClose" class="btn btn-danger pull-right glyphicon glyphicon-remove closebutton col-md-12" >' +
-            'Move, Get out the Way</button>' +
+            'Remove Map</button>' +
             '<iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=' + currentLocation + '&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU">' +
             '</iframe>' +
             '</div>' +
