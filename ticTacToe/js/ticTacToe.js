@@ -8,7 +8,7 @@
 //                                                              //
 //  Middle text that shows current turn has the Id of turnText  //
 //                                                              //
-//  Tables was used in my page with three rows and three colums //
+//  Tables was used in my page with three rows and three columns //
 //                                                              //
 //  Each cell of the table should have a value starting at 0    //
 //      and continue until it reaches 8 on the last cell.       //
@@ -29,12 +29,12 @@ var oTurn = false;
 var lastWinnerX = true;
 var lastWinnerO = false;
 var turnCount = 0;
-//Checks spaces in order of showinig on the board. 0, 1, 2
+//Checks spaces in order of showing on the board. 0, 1, 2
 //                                                 3, 4, 5
 //                                                 6, 7, 8
 var isOccupied = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-//Stores all avalible Winning Combination
+//Stores all avaliable Winning Combination
 var winningCombinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -58,7 +58,7 @@ $(function() {
     //Id for the X Win counter
     $('#xWins').text(xWins);
 
-    //My board is a table of three rows three colums. This checks where it is checks by finding the id. Id should start at 0 for the first and end with 8 on the last.
+    //My board is a table of three rows three columns. This checks where it is checks by finding the id. Id should start at 0 for the first and end with 8 on the last.
     $('td').click(function() {
         var td = $(this).attr("id");
 
@@ -84,11 +84,12 @@ function debug(msg) {
 //Start of my takeTurn function
 function takeTurn(box) {
 
-    //Add one to the turn count.
-    turnCount++
 
     //Check if current box is occupied
     if (isOccupied[box] < 1) {
+
+    //Add one to the turn count.
+    turnCount++
 
         //Checks if it is O's Turn if current box is empty
         if (oTurn) {
@@ -147,7 +148,7 @@ function checkWin(oTurn) {
             //sets the middle text at top of the page to O is the winner
             $('#turnText').text("O is the Winner.");
 
-            //add a wincount to O
+            //add a win count to O
             oWins++;
 
             //Shows current win count of O
